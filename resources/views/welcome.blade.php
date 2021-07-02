@@ -12,9 +12,9 @@
     <div>
         <h1> Todo list</h1>
         <ul>
-            <li><a href="">Learn Laravel</a></li>
-            <li><a href="">Take dinner</a></li>
-            <li><a href="">Install Arch</a></li>
+            @foreach ($todolist as $todos)
+                <li>{{$todos->title}}</li>
+            @endforeach
         </ul>
     </div>
 </body>
