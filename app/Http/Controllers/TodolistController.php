@@ -11,4 +11,14 @@ class TodolistController extends Controller
         $todolist = Todolist::all();
         return view('welcome', ['todolist'=>$todolist]);
     }
+
+    public function create(Request $request){
+        $input = $request->all();
+        
+        $todo = new Todolist;
+        $todo->title = $input['title'];
+        $todo->save();
+        
+        return redirect('/');
+    }
 }

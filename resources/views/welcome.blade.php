@@ -16,6 +16,12 @@
                 <li>{{$todos->title}}</li>
             @endforeach
         </ul>
+        
+        <form method="POST" action="/new">
+            @csrf
+            <input type="text" name="title" id="title" />
+            <input type="submit" name="submit" value="Submit" />
+        </form>
     </div>
 </body>
 

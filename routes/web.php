@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TodolistController::class, 'index']);
+Route::post('/new', [TodolistController::class, 'create']);
